@@ -1,0 +1,55 @@
+#Aldığı isim soy isim ile listeye öğrenci ekleyen
+ogrenciListesi=[]
+def ogrenciEkleme():
+  Ad=input("Lütfen adınızı giriniz.")
+  soyad=input("Lütfen soyadınızı giriniz.")
+  AdSoyad=Ad+" "+soyad
+  ogrenciListesi.append(AdSoyad)
+ogrenciEkleme()
+print(ogrenciListesi)
+
+#Aldığı isim soy isim ile eşleşen değeri listeden kaldıran
+def ogrenciSilme():
+  Ad=input("Lütfen silinecek adı giriniz: ")
+  soyad=input("Lütfen silinecek soyadı giriniz: ")
+  AdSoyad=Ad+" "+soyad
+  ogrenciListesi.remove(AdSoyad)
+ogrenciSilme()
+print(ogrenciListesi)
+
+
+#Listeye birden fazla öğrenci eklemeyi mümkün kılan
+def CokluOgrenciEkleme():
+  adet=int(input("kaç öğrenci ekleyeceksiniz: "))
+  for i in range(adet):
+    ogrenciEkleme()
+CokluOgrenciEkleme()
+print(ogrenciListesi)
+
+
+#Listedeki tüm öğrencileri tek tek ekrana yazdıran
+def ogrenciYazdirma():
+  print(ogrenciListesi)
+ogrenciYazdirma()
+
+
+#Öğrencinin listedeki index numarası öğrenci numarası olarak kabul edildiğini düşünerek öğrencinin numarasını öğrenmeyi mümkün kılan
+def ogrenciIndexNumarasi():
+  NumaraAd=input("Lütfen numarasını öğrenmek istediğiniz öğrencinin adınızı giriniz.")
+  NumaraSoyad=input("Lütfen numarasını öğrenmek istediğiniz öğrencinin soyadınızı giriniz.")
+  NumaraAdSoyad=NumaraAd+" "+NumaraSoyad
+  numara=ogrenciListesi.index(NumaraAdSoyad)
+  print(NumaraAd + " öğrenicinin numarası: " + str(numara))
+ogrenciIndexNumarasi()
+
+
+ #Listeden birden fazla öğrenci silmeyi mümkün kılan (döngü kullanınız)
+def CokluOgrenciSilme():
+  i=0
+  x=int(input("Kaç tane öğrenci silmek istiyorsunuz?: "))
+  while i<x:
+    Ad=input("Lütfen silmek istediğiniz öğrencinin adı ve soyadını giriniz")
+    OgrenciListesi.remove(Ad)
+    i +=1
+CokluOgrenciSilme()
+print(OgrenciListesi)
